@@ -1,69 +1,72 @@
-Suppose we want to build an automation project that will execute every night at 12:00 AM, generate reports and then give us the reports. Right now we want to cover the following two features Registration and PlaceOrder.
+```markdown
+# Automated Testing for NopCommerce Features
 
-Here is the website link: nopCommerce (https://demo.nopcommerce.com/)
+## Introduction
 
-Please use two different test files Registration and PlaceOrder.
+We aim to build an automation project that executes every night at 12:00 AM, generates reports, and provides them. Currently, we want to cover two features: Registration and PlaceOrder.
 
-@registration
-Feature: Nopcommerce registration feature Test
+Website link: [nopCommerce](https://demo.nopcommerce.com/)
 
-@test-1
-Scenario Outline: User should be able to registration new account successfully
-Given User go to the NopCommerce Home page
-And User navigate to the Registration page
-When User select the <type> as gender
-And User set first name and last name
-And User set <dob> as date of birth
-And User set <dynamicEmail> as email
-And User set <companyName> as company details
-And User set Newsletter option as <status>
-And User set <password> as password and confirm password again
-And User click on the Register button
-Then Verify that the new account registration message <msg> is displayed
-Examples:
+## Registration Feature
+
+### Scenario: User Registration
+
+1. **Given** the user is on the NopCommerce Home page.
+2. **And** the user navigates to the Registration page.
+3. **When** the user selects the gender as `<type>`.
+4. **And** the user sets the first name and last name.
+5. **And** the user sets the date of birth as `<dob>`.
+6. **And** the user sets the email as `<dynamicEmail>`.
+7. **And** the user sets the company details as `<companyName>`.
+8. **And** the user sets the newsletter option as `<status>`.
+9. **And** the user sets the password and confirms it.
+10. **And** the user clicks on the Register button.
+11. **Then** verify that the new account registration message `<msg>` is displayed.
+
+### Examples:
+
 | type     | dob          | dynamicEmail | companyName       | status      | password    | msg                           |
+| -------- | ------------ | ------------ | ----------------- | ----------- | ----------- | ------------------------------ |
 | "Male"   | "20/05/1995" | ""           | "Ahmed Pvt. Ltd." | "checked"   | "pass@1234" | "Your registration completed" |
 | "Female" | "9/05/1999"  | ""           | "Ahmed Pvt. Ltd." | "unchecked" | "pass@1234" | "Your registration completed" |
 | "Female" | "3/05/2000"  | ""           | "Ahmed Pvt. Ltd." | "unchecked" | "pass@1234" | "Your registration completed" |
 | "Male"   | "2/05/2001"  | ""           | "Ahmed Pvt. Ltd." | "checked"   | "pass@1234" | "Your registration completed" |
 | "Female" | "10/05/1990" | ""           | "Ahmed Pvt. Ltd." | "unchecked" | "pass@1234" | "Your registration completed" |
 
+## PlaceOrder Feature
 
-@placeOrder
-Feature: Nopcommerce place order feature Test
+### Scenario: Placing an Order as a Guest User
 
-@test-2
-Scenario: User should be able to successfully place order as a guest user
-Given User go to the NopCommerce Home page
-When User click "Cell phones" option from "Electronics" category
-And User click on the "Nokia Lumia 1020" for product details
-And User set the quantity number 2 in the quantity field
-And User click on the "ADD TO CART" button
-And User go to the shipping cart page
-And User accept terms conditions and click checkout button
-And User click checkout as guest button
-And User input all the billing details and click continue
-And User select shipping method "Next Day Air" and click continue
-And User select payment method "Credit Card" and click continue
-And User select "Visa" card and input card information
-And User click confirm button to place the order
-Then Verify that the order place message "Your order has been successfully processed!" is displayed
+1. **Given** the user is on the NopCommerce Home page.
+2. **When** the user clicks on "Cell phones" under the "Electronics" category.
+3. **And** the user selects the "Nokia Lumia 1020" for product details.
+4. **And** the user sets the quantity to 2.
+5. **And** the user clicks the "ADD TO CART" button.
+6. **And** the user proceeds to the shipping cart page.
+7. **And** the user accepts the terms and conditions and clicks the checkout button.
+8. **And** the user checks out as a guest.
+9. **And** the user inputs billing details and clicks continue.
+10. **And** the user selects the shipping method as "Next Day Air" and clicks continue.
+11. **And** the user selects the payment method as "Credit Card" and clicks continue.
+12. **And** the user selects the "Visa" card and inputs card information.
+13. **And** the user clicks the confirm button to place the order.
+14. **Then** verify that the order placement message "Your order has been successfully processed!" is displayed.
 
-Additional functionalities, that may be covered:
+## Additional Functionalities
 
-Automation projects should be capable of running on different OS platform
-Use any automation framework you preferred
-Use Java or other programming languages as you prefer
-Choose any framework that supports Page Object Modal(POM) design pattern
-You can feel free to use any test reporting tools(Ex. Extent Report, Allure report)
-You can feel free to use any data provider such as excel/CSV
-Use your imagination and write some additional tests if you feel you can cover other important functionalities
-The more, the better. Only if it makes sense 😏
+- Automation projects should be capable of running on different OS platforms.
+- Use any preferred automation framework (e.g., Selenium, Cypress).
+- Choose a framework that supports the Page Object Model (POM) design pattern.
+- Utilize test reporting tools (e.g., Extent Report, Allure report).
+- Feel free to use any data provider (e.g., Excel, CSV).
+- Use your imagination to write additional tests if they cover other important functionalities.
 
-Record a video of tests execution:
+Remember, the more comprehensive, the better! 😏
 
-Please record a video of the test cases execution and attach the video as part of your solution
+## Task Submission
 
-Task Submission:
-
-You can put the code publicly in (GitHub or similar code control systems) if you want.
+Feel free to put the code publicly on GitHub or a similar code control system.
+```
+Feel free to record a video of the test case execution and attach it as part of your solution. If you have any further questions or need assistance, feel free to ask! 🚀
+```markdown
+```
