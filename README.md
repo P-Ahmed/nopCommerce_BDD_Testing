@@ -1,4 +1,3 @@
-```markdown
 # Automated Testing for NopCommerce Features
 
 ## Introduction
@@ -68,5 +67,3 @@ Remember, the more comprehensive, the better! 😏
 Feel free to put the code publicly on GitHub or a similar code control system.
 ```
 Feel free to record a video of the test case execution and attach it as part of your solution. If you have any further questions or need assistance, feel free to ask! 🚀
-```markdown
-```
