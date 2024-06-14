@@ -1,10 +1,8 @@
 Suppose we want to build an automation project that will execute every night at 12:00 AM, generate reports and then give us the reports. Right now we want to cover the following two features Registration and PlaceOrder.
 
-Here is the website link: nopCommerce
-
+Here is the website link: nopCommerce (https://demo.nopcommerce.com/)
 
 Please use two different test files Registration and PlaceOrder.
-
 
 @registration
 Feature: Nopcommerce registration feature Test
@@ -24,12 +22,11 @@ And User click on the Register button
 Then Verify that the new account registration message <msg> is displayed
 Examples:
 | type     | dob          | dynamicEmail | companyName       | status      | password    | msg                           |
-| "Male"   | "20/05/1995" | ""           | "Brainstation-23" | "checked"   | "pass@1234" | "Your registration completed" |
-| "Female" | "9/05/1999"  | ""           | "Brainstation-23" | "unchecked" | "pass@1234" | "Your registration completed" |
-| "Female" | "3/05/2000"  | ""           | "Brainstation-23" | "unchecked" | "pass@1234" | "Your registration completed" |
-| "Male"   | "2/05/2001"  | ""           | "Brainstation-23" | "checked"   | "pass@1234" | "Your registration completed" |
-| "Female" | "10/05/1990" | ""           | "Brainstation-23" | "unchecked" | "pass@1234" | "Your registration completed" |
-
+| "Male"   | "20/05/1995" | ""           | "Ahmed Pvt. Ltd." | "checked"   | "pass@1234" | "Your registration completed" |
+| "Female" | "9/05/1999"  | ""           | "Ahmed Pvt. Ltd." | "unchecked" | "pass@1234" | "Your registration completed" |
+| "Female" | "3/05/2000"  | ""           | "Ahmed Pvt. Ltd." | "unchecked" | "pass@1234" | "Your registration completed" |
+| "Male"   | "2/05/2001"  | ""           | "Ahmed Pvt. Ltd." | "checked"   | "pass@1234" | "Your registration completed" |
+| "Female" | "10/05/1990" | ""           | "Ahmed Pvt. Ltd." | "unchecked" | "pass@1234" | "Your registration completed" |
 
 
 @placeOrder
@@ -52,8 +49,6 @@ And User select "Visa" card and input card information
 And User click confirm button to place the order
 Then Verify that the order place message "Your order has been successfully processed!" is displayed
 
-
-
 Additional functionalities, that may be covered:
 
 Automation projects should be capable of running on different OS platform
@@ -65,20 +60,10 @@ You can feel free to use any data provider such as excel/CSV
 Use your imagination and write some additional tests if you feel you can cover other important functionalities
 The more, the better. Only if it makes sense 😏
 
-
-
 Record a video of tests execution:
 
 Please record a video of the test cases execution and attach the video as part of your solution
 
-
 Task Submission:
 
 You can put the code publicly in (GitHub or similar code control systems) if you want.
-Send it in your favourite format (link to versioned code, code in zip file etc.) to us.
-
-
-Note:
-
-Please don't use BS-23 or Brainstation-23 name in title, description or the code itself. This helps others to find the
-libraries that are really related to our services and/or are developed and maintained by our team.
